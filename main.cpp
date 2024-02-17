@@ -3,7 +3,6 @@ using namespace std;
 
 int main(int argc, char* argv[]) {
     vector<int> arr = {1, 4, 2, 7, 5, 9, 10, 6, -53, -2}, temp = arr, ans = arr;
-    // vector<int> arr = {1, 4, 2, 7, 5, 9, 10, 6}, temp = arr, ans = arr;
     sort(ans.begin(), ans.end());
     sortAlgo algo;
 
