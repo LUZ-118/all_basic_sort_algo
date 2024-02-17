@@ -1,0 +1,3 @@
+/home/luzzzzzhe/PROJECTS/sort_Methods/CMakeFiles/rebuild_cache.dir
+/home/luzzzzzhe/PROJECTS/sort_Methods/CMakeFiles/edit_cache.dir
+/home/luzzzzzhe/PROJECTS/sort_Methods/CMakeFiles/sortDemo.dir
