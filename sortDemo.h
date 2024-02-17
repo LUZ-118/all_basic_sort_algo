@@ -6,6 +6,7 @@ using namespace std;
 
 class sortAlgo {
     public:
+        sortAlgo(){cout << "Build a sorting Algo tool.\n";}
         // simple
         void bubble(vector<int>&);
         void insertion(vector<int>&);
