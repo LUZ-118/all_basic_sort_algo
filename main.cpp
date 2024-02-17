@@ -5,6 +5,8 @@ int main(int argc, char* argv[]) {
     vector<int> arr = {1, 4, 2, 7, 5, 9, 10, 6, -53, -2}, temp = arr, ans = arr;
     sort(ans.begin(), ans.end());
     sortAlgo algo;
+    algo.print_this();
+    cout << algo.glo_val << endl;
 
     algo.bubble(temp);
     algo.OOOresult(temp);
