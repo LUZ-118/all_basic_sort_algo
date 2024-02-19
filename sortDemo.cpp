@@ -1,6 +1,7 @@
 #include "sortDemo.h"
 
-void sortAlgo::bubble(vector<int> &arr) {
+void sortAlgo::bubble(vector<int> &arr) 
+{
     for(int i = 1; i < arr.size(); i++) {
         bool flag = false;
         for(int j = 0; j < arr.size() - i; j++) {
@@ -13,7 +14,8 @@ void sortAlgo::bubble(vector<int> &arr) {
     }
 };
 
-void sortAlgo::insertion(vector<int> &arr) {
+void sortAlgo::insertion(vector<int> &arr) 
+{
     for(int i = 1; i < arr.size(); i++) {
         int temp = arr[i], j;
         for(j = i; j >= 1 && temp < arr[j - 1]; j--) {
@@ -23,7 +25,8 @@ void sortAlgo::insertion(vector<int> &arr) {
     }
 };
 
-void sortAlgo::selection(vector<int> &arr) {
+void sortAlgo::selection(vector<int> &arr) 
+{
     for(int i = 0; i < arr.size() - 1; i++) {
         int temp = i;
         for(int j = i + 1; j < arr.size(); j++) {
@@ -33,7 +36,8 @@ void sortAlgo::selection(vector<int> &arr) {
     }
 };
 
-void sortAlgo::shell(vector<int> &arr) {
+void sortAlgo::shell(vector<int> &arr) 
+{
     int gap = arr.size() / 2;
 
     while(gap > 0) {
@@ -48,11 +52,13 @@ void sortAlgo::shell(vector<int> &arr) {
     }
 }
 
-void sortAlgo::merge(vector<int> &arr) {
+void sortAlgo::merge(vector<int> &arr) 
+{
     sub_merge(arr, 0, arr.size() - 1);
 }
 
-void sortAlgo::sub_merge(vector<int> &arr, int LB, int RB) {
+void sortAlgo::sub_merge(vector<int> &arr, int LB, int RB) 
+{
     if(LB >= RB) return;
     // (RB + LB) / 2;
     int mid = (RB - LB) / 2 + LB;
@@ -75,7 +81,8 @@ void sortAlgo::quick(vector<int> &arr) {
     sub_quick(arr, 0, arr.size() - 1);
 };
 
-void sortAlgo::sub_quick(vector<int> &arr, int LB, int RB) {
+void sortAlgo::sub_quick(vector<int> &arr, int LB, int RB) 
+{
     if(LB >= RB) return;
 
     int pivot = LB, L = pivot, R = RB + 1;
@@ -93,7 +100,8 @@ void sortAlgo::sub_quick(vector<int> &arr, int LB, int RB) {
     sub_quick(arr, R + 1, RB);
 }
 
-void sortAlgo::heaps(vector<int> &arr) {
+void sortAlgo::heaps(vector<int> &arr) 
+{
     int len = arr.size() - 1;
 
     for(int i = (len - 1) >> 1; i >= 0; i--)
@@ -104,7 +112,8 @@ void sortAlgo::heaps(vector<int> &arr) {
     }
 };
 
-void sortAlgo::max_heapify(vector<int> &arr, int k, int boundary) {
+void sortAlgo::max_heapify(vector<int> &arr, int k, int boundary) 
+{
     while(k < boundary) {
         int max_idx = k, L = (k << 1) + 1, R = (k << 1) + 2;
         max_idx = (L < boundary && arr[max_idx] < arr[L])? L : max_idx;
@@ -115,7 +124,8 @@ void sortAlgo::max_heapify(vector<int> &arr, int k, int boundary) {
     }
 }
 
-void sortAlgo::radix(vector<int> &arr) {
+void sortAlgo::radix(vector<int> &arr) 
+{
     int factor = 1, max_v = INT_MIN, min_v = INT_MAX;
     for(auto &item : arr)
         min_v = min_v > item? item : min_v;
@@ -133,7 +143,8 @@ void sortAlgo::radix(vector<int> &arr) {
         item += min_v;
 };
 
-void sortAlgo::sub_radix(vector<int> &arr, int factor) {
+void sortAlgo::sub_radix(vector<int> &arr, int factor) 
+{
     int DigitSize = 10, len = arr.size();
     vector<int> freq(DigitSize, 0), sorted(len, 0);
     for(int i = 0; i < len; i++)
@@ -145,11 +156,13 @@ void sortAlgo::sub_radix(vector<int> &arr, int factor) {
     arr = sorted;
 };
 
-int sortAlgo::getDigit(int num, int factor) {
+int sortAlgo::getDigit(int num, int factor) 
+{
     return (abs(num) / abs(factor)) % 10;
 };
 
-void sortAlgo::counting(vector<int> &arr) {
+void sortAlgo::counting(vector<int> &arr) 
+{
     int max_v = INT_MIN, min_v = INT_MAX;
     for(auto &item : arr) {
         max_v = max_v < item ? item : max_v;
@@ -166,7 +179,8 @@ void sortAlgo::counting(vector<int> &arr) {
     arr = sorted;
 };
 
-void sortAlgo::OOOresult(vector<int> &arr) {
+void sortAlgo::OOOresult(vector<int> &arr) 
+{
     for(int &item : arr) {
         cout << item << ", ";
     }

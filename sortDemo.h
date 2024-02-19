@@ -4,7 +4,8 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-class sortAlgo {
+class sortAlgo 
+{
     public:
         int glo_val = 78763;
         sortAlgo() : val(333) {cout << "Build a sorting Algo tool.\n";}
