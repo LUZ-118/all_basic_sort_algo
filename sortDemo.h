@@ -9,6 +9,7 @@ class sortAlgo
     public:
         int glo_val = 78763;
         sortAlgo() : val(333) {cout << "Build a sorting Algo tool.\n";}
+        ~sortAlgo() {;}
         void print_this() {cout << this->glo_val << endl;}
         // simple
         void bubble(vector<int>&);
